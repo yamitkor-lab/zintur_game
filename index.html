@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>אנחנו כאן יחד</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="stage">
+    <!-- הלוח המאושר — מוצג בשלמותו, בלי ציור כפול מעליו -->
+    <img id="boardImg" class="board-img" alt="" draggable="false">
+
+    <!-- שכבות ממשק שקופות מעל לוח הבקרה המאויר -->
+    <div id="hud"></div>
+    <div id="tokens"></div>
+    <div id="debugLayer"></div>
+
+    <div class="top-tools">
+      <button id="btnRestart" class="btn btn-soft">↺ התחלה מחדש</button>
+      <button id="btnFullscreen" class="btn btn-soft btn-icon" aria-label="מסך מלא">⛶</button>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- קלף פתוח -->
+    <div id="cardModal" class="overlay hidden">
+      <div id="cardHolder" class="card-holder"></div>
+      <button id="btnContinue" class="btn btn-primary btn-continue">המשך</button>
+    </div>
+
+    <!-- מסך פתיחה -->
+    <div id="setup" class="overlay"></div>
+
+    <!-- חלון הודעה כללי -->
+    <div id="dialog" class="overlay hidden"><div class="dialog-box" id="dialogBox"></div></div>
+  </div>
+
+  <script src="js/data/assets.js"></script>
+  <script src="js/data/board.js"></script>
+  <script src="js/data/layout.js"></script>
+  <script src="js/data/cards.js"></script>
+  <script src="js/data/characters.js"></script>
+  <script src="js/data/rules.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
